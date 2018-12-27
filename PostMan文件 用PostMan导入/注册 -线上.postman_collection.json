@@ -1,0 +1,1048 @@
+{
+	"info": {
+		"_postman_id": "64648ff5-234c-4722-8439-447d9e179dc2",
+		"name": "注册 -线上",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "用户",
+			"item": [
+				{
+					"name": "手机",
+					"item": [
+						{
+							"name": "发送注册验证码",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://www.liwi.vip/v1/phone/send/customerRegisterCode?phoneNumber=1390002",
+									"protocol": "http",
+									"host": [
+										"www",
+										"liwi",
+										"vip"
+									],
+									"path": [
+										"v1",
+										"phone",
+										"send",
+										"customerRegisterCode"
+									],
+									"query": [
+										{
+											"key": "phoneNumber",
+											"value": "1390002"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "手机号注册",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://www.liwi.vip/v1/phone/customerSignUp?nickName=1220Test&phoneNumber=1390002&verifyCode=1234&password=1234&verifyPassword=1234",
+									"protocol": "http",
+									"host": [
+										"www",
+										"liwi",
+										"vip"
+									],
+									"path": [
+										"v1",
+										"phone",
+										"customerSignUp"
+									],
+									"query": [
+										{
+											"key": "nickName",
+											"value": "1220Test",
+											"description": "昵称"
+										},
+										{
+											"key": "phoneNumber",
+											"value": "1390002",
+											"description": "手机号"
+										},
+										{
+											"key": "verifyCode",
+											"value": "1234",
+											"description": "验证码"
+										},
+										{
+											"key": "password",
+											"value": "1234",
+											"description": "密码"
+										},
+										{
+											"key": "verifyPassword",
+											"value": "1234",
+											"description": "确认密码"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "手机登陆",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://www.liwi.vip/v1/phone/customerSignIn?phoneNumber=1390002&password=2234",
+									"protocol": "http",
+									"host": [
+										"www",
+										"liwi",
+										"vip"
+									],
+									"path": [
+										"v1",
+										"phone",
+										"customerSignIn"
+									],
+									"query": [
+										{
+											"key": "phoneNumber",
+											"value": "1390002",
+											"description": "手机号"
+										},
+										{
+											"key": "password",
+											"value": "2234",
+											"description": "密码"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "验证手机号是否存在----找回密码",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://www.liwi.vip/v1/phone/customerVerify?phoneNumber=1390002",
+									"protocol": "http",
+									"host": [
+										"www",
+										"liwi",
+										"vip"
+									],
+									"path": [
+										"v1",
+										"phone",
+										"customerVerify"
+									],
+									"query": [
+										{
+											"key": "phoneNumber",
+											"value": "1390002",
+											"description": "手机号"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "发送找回密码验证码",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://www.liwi.vip/v1/phone/send/customerPasswordCode?phoneNumber=1390002",
+									"protocol": "http",
+									"host": [
+										"www",
+										"liwi",
+										"vip"
+									],
+									"path": [
+										"v1",
+										"phone",
+										"send",
+										"customerPasswordCode"
+									],
+									"query": [
+										{
+											"key": "phoneNumber",
+											"value": "1390002",
+											"description": "手机号码"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "用户手机验证码校验",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://www.liwi.vip/v1/phone/code/customerVerify?phoneNumber=1390002&verifyCode=1234",
+									"protocol": "http",
+									"host": [
+										"www",
+										"liwi",
+										"vip"
+									],
+									"path": [
+										"v1",
+										"phone",
+										"code",
+										"customerVerify"
+									],
+									"query": [
+										{
+											"key": "phoneNumber",
+											"value": "1390002",
+											"description": "手机号码"
+										},
+										{
+											"key": "verifyCode",
+											"value": "1234",
+											"description": "验证码"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "邮箱",
+					"item": [
+						{
+							"name": "发送注册验证码",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://www.liwi.vip/v1/email/send/customerRegisterCode?email=test1@qq.com",
+									"protocol": "http",
+									"host": [
+										"www",
+										"liwi",
+										"vip"
+									],
+									"path": [
+										"v1",
+										"email",
+										"send",
+										"customerRegisterCode"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "test1@qq.com"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "邮箱号注册",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://www.liwi.vip/v1/email/customerSignUp?nickName=12201&email=test1@qq.com&verifyCode=1234&password=1234&verifyPassword=1234",
+									"protocol": "http",
+									"host": [
+										"www",
+										"liwi",
+										"vip"
+									],
+									"path": [
+										"v1",
+										"email",
+										"customerSignUp"
+									],
+									"query": [
+										{
+											"key": "nickName",
+											"value": "12201",
+											"description": "昵称"
+										},
+										{
+											"key": "email",
+											"value": "test1@qq.com",
+											"description": "手机号"
+										},
+										{
+											"key": "verifyCode",
+											"value": "1234",
+											"description": "验证码"
+										},
+										{
+											"key": "password",
+											"value": "1234",
+											"description": "密码"
+										},
+										{
+											"key": "verifyPassword",
+											"value": "1234",
+											"description": "确认密码"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "邮箱登陆",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://www.liwi.vip/v1/email/customerSignIn?email=test1@qq.com&password=1234",
+									"protocol": "http",
+									"host": [
+										"www",
+										"liwi",
+										"vip"
+									],
+									"path": [
+										"v1",
+										"email",
+										"customerSignIn"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "test1@qq.com",
+											"description": "手机号"
+										},
+										{
+											"key": "password",
+											"value": "1234",
+											"description": "密码"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "验证邮箱号是否存在----找回密码",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://www.liwi.vip/v1/email/customerVerify?email=test1@qq.com",
+									"protocol": "http",
+									"host": [
+										"www",
+										"liwi",
+										"vip"
+									],
+									"path": [
+										"v1",
+										"email",
+										"customerVerify"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "test1@qq.com",
+											"description": "手机号"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "发送找回密码验证码",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://www.liwi.vip/v1/email/send/customerPasswordCode?email=test1@qq.com",
+									"protocol": "http",
+									"host": [
+										"www",
+										"liwi",
+										"vip"
+									],
+									"path": [
+										"v1",
+										"email",
+										"send",
+										"customerPasswordCode"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "test1@qq.com",
+											"description": "手机号码"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "用户邮箱验证码校验",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://www.liwi.vip/v1/email/code/customerVerify?email=test1@qq.com&verifyCode=1234",
+									"protocol": "http",
+									"host": [
+										"www",
+										"liwi",
+										"vip"
+									],
+									"path": [
+										"v1",
+										"email",
+										"code",
+										"customerVerify"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "test1@qq.com",
+											"description": "手机号码"
+										},
+										{
+											"key": "verifyCode",
+											"value": "1234",
+											"description": "验证码"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "商家",
+			"item": [
+				{
+					"name": "手机",
+					"item": [
+						{
+							"name": "发送注册验证码",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://www.liwi.vip/v1/phone/send/storeRegisterCode?phoneNumber=1390002",
+									"protocol": "http",
+									"host": [
+										"www",
+										"liwi",
+										"vip"
+									],
+									"path": [
+										"v1",
+										"phone",
+										"send",
+										"storeRegisterCode"
+									],
+									"query": [
+										{
+											"key": "phoneNumber",
+											"value": "1390002"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "手机号注册",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://www.liwi.vip/v1/phone/storeSignUp?nickName=1220Test&phoneNumber=1390002&verifyCode=1234&password=1234&verifyPassword=1234",
+									"protocol": "http",
+									"host": [
+										"www",
+										"liwi",
+										"vip"
+									],
+									"path": [
+										"v1",
+										"phone",
+										"storeSignUp"
+									],
+									"query": [
+										{
+											"key": "nickName",
+											"value": "1220Test",
+											"description": "昵称"
+										},
+										{
+											"key": "phoneNumber",
+											"value": "1390002",
+											"description": "手机号"
+										},
+										{
+											"key": "verifyCode",
+											"value": "1234",
+											"description": "验证码"
+										},
+										{
+											"key": "password",
+											"value": "1234",
+											"description": "密码"
+										},
+										{
+											"key": "verifyPassword",
+											"value": "1234",
+											"description": "确认密码"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "手机登陆",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://www.liwi.vip/v1/phone/storeSignIn?phoneNumber=1390002&password=2234",
+									"protocol": "http",
+									"host": [
+										"www",
+										"liwi",
+										"vip"
+									],
+									"path": [
+										"v1",
+										"phone",
+										"storeSignIn"
+									],
+									"query": [
+										{
+											"key": "phoneNumber",
+											"value": "1390002",
+											"description": "手机号"
+										},
+										{
+											"key": "password",
+											"value": "2234",
+											"description": "密码"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "验证手机号是否存在----找回密码",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://www.liwi.vip/v1/phone/storeVerify?phoneNumber=1390002",
+									"protocol": "http",
+									"host": [
+										"www",
+										"liwi",
+										"vip"
+									],
+									"path": [
+										"v1",
+										"phone",
+										"storeVerify"
+									],
+									"query": [
+										{
+											"key": "phoneNumber",
+											"value": "1390002",
+											"description": "手机号"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "发送找回密码验证码",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://www.liwi.vip/v1/phone/send/storePasswordCode?phoneNumber=1390002",
+									"protocol": "http",
+									"host": [
+										"www",
+										"liwi",
+										"vip"
+									],
+									"path": [
+										"v1",
+										"phone",
+										"send",
+										"storePasswordCode"
+									],
+									"query": [
+										{
+											"key": "phoneNumber",
+											"value": "1390002",
+											"description": "手机号码"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "用户手机验证码校验",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://www.liwi.vip/v1/phone/code/storeVerify?phoneNumber=1390002&verifyCode=1234",
+									"protocol": "http",
+									"host": [
+										"www",
+										"liwi",
+										"vip"
+									],
+									"path": [
+										"v1",
+										"phone",
+										"code",
+										"storeVerify"
+									],
+									"query": [
+										{
+											"key": "phoneNumber",
+											"value": "1390002",
+											"description": "手机号码"
+										},
+										{
+											"key": "verifyCode",
+											"value": "1234",
+											"description": "验证码"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "邮箱",
+					"item": [
+						{
+							"name": "发送注册验证码",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://www.liwi.vip/v1/email/send/storeRegisterCode?email=test1@qq.com",
+									"protocol": "http",
+									"host": [
+										"www",
+										"liwi",
+										"vip"
+									],
+									"path": [
+										"v1",
+										"email",
+										"send",
+										"storeRegisterCode"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "test1@qq.com"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "邮箱号注册",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://www.liwi.vip/v1/email/storeSignUp?nickName=12201&email=test1@qq.com&verifyCode=1234&password=1234&verifyPassword=1234",
+									"protocol": "http",
+									"host": [
+										"www",
+										"liwi",
+										"vip"
+									],
+									"path": [
+										"v1",
+										"email",
+										"storeSignUp"
+									],
+									"query": [
+										{
+											"key": "nickName",
+											"value": "12201",
+											"description": "昵称"
+										},
+										{
+											"key": "email",
+											"value": "test1@qq.com",
+											"description": "手机号"
+										},
+										{
+											"key": "verifyCode",
+											"value": "1234",
+											"description": "验证码"
+										},
+										{
+											"key": "password",
+											"value": "1234",
+											"description": "密码"
+										},
+										{
+											"key": "verifyPassword",
+											"value": "1234",
+											"description": "确认密码"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "邮箱登陆",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://www.liwi.vip/v1/email/storeSignIn?email=test1@qq.com&password=1234",
+									"protocol": "http",
+									"host": [
+										"www",
+										"liwi",
+										"vip"
+									],
+									"path": [
+										"v1",
+										"email",
+										"storeSignIn"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "test1@qq.com",
+											"description": "手机号"
+										},
+										{
+											"key": "password",
+											"value": "1234",
+											"description": "密码"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "验证邮箱号是否存在----找回密码",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://www.liwi.vip/v1/email/storeVerify?email=test1@qq.com",
+									"protocol": "http",
+									"host": [
+										"www",
+										"liwi",
+										"vip"
+									],
+									"path": [
+										"v1",
+										"email",
+										"storeVerify"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "test1@qq.com",
+											"description": "手机号"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "发送找回密码验证码",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://www.liwi.vip/v1/email/send/storePasswordCode?email=test1@qq.com",
+									"protocol": "http",
+									"host": [
+										"www",
+										"liwi",
+										"vip"
+									],
+									"path": [
+										"v1",
+										"email",
+										"send",
+										"storePasswordCode"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "test1@qq.com",
+											"description": "手机号码"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "用户邮箱验证码校验",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://www.liwi.vip/v1/email/code/storeVerify?email=test1@qq.com&verifyCode=1234",
+									"protocol": "http",
+									"host": [
+										"www",
+										"liwi",
+										"vip"
+									],
+									"path": [
+										"v1",
+										"email",
+										"code",
+										"storeVerify"
+									],
+									"query": [
+										{
+											"key": "email",
+											"value": "test1@qq.com",
+											"description": "手机号码"
+										},
+										{
+											"key": "verifyCode",
+											"value": "1234",
+											"description": "验证码"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "修改密码",
+			"item": [
+				{
+					"name": "用户修改密码-未登陆",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://www.liwi.vip/v1/password/customerReset?resetPasswordKey=c493ae8b-6730-4b7b-a335-05a82a0a7e3a&password=2234&verifyPassword=2234",
+							"protocol": "http",
+							"host": [
+								"www",
+								"liwi",
+								"vip"
+							],
+							"path": [
+								"v1",
+								"password",
+								"customerReset"
+							],
+							"query": [
+								{
+									"key": "resetPasswordKey",
+									"value": "c493ae8b-6730-4b7b-a335-05a82a0a7e3a"
+								},
+								{
+									"key": "password",
+									"value": "2234"
+								},
+								{
+									"key": "verifyPassword",
+									"value": "2234"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "商家修改密码-未登陆",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://www.liwi.vip/v1/password/storeReset?resetPasswordKey=2c367d02-0f84-4e7f-a8cf-3ed068257de3&password=2234&verifyPassword=2234",
+							"protocol": "http",
+							"host": [
+								"www",
+								"liwi",
+								"vip"
+							],
+							"path": [
+								"v1",
+								"password",
+								"storeReset"
+							],
+							"query": [
+								{
+									"key": "resetPasswordKey",
+									"value": "2c367d02-0f84-4e7f-a8cf-3ed068257de3"
+								},
+								{
+									"key": "password",
+									"value": "2234"
+								},
+								{
+									"key": "verifyPassword",
+									"value": "2234"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
